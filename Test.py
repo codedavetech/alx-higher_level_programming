@@ -1,7 +1,18 @@
-def assign_value(n, v):
-    n = v
+class Base():
+    """ My base class """
 
-l1 = [1, 2, 3]
-l2 = [4, 5, 6]
-assign_value(l1, l2)
-print(l1)
+    __nb_instances = 0
+
+    def __init__(self):
+        Base.__nb_instances += 1
+        self.id = Base.__nb_instances
+
+class User(Base):
+    """ My User class """
+
+    def __init__(self):
+        super().__init__()
+        self.id = 89
+
+u = User()
+print(u.id)
