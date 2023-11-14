@@ -122,3 +122,4 @@ class Rectangle(Base):
             "height": self.__height,
             'width': self.__width,
         }
+        
